@@ -1,0 +1,31 @@
+.header{
+        height: 50px;
+        background: #7ad9f9;
+        z-index: 1000;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        left: 0px;
+        border-bottom: 1px solid #00CCFF;
+}
+.menu,.logo,.search {
+    width: 60px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;  
+}
+.menu {
+    float: left;
+}
+.logo {
+    float: left;
+    margin: 0 0 0 60px;
+}
+.search {
+    float: right;
+}
+img {
+    margin: 6px 0 0 0;
+}

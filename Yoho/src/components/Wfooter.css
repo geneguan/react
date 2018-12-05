@@ -1,0 +1,46 @@
+.footer{
+    display: block;
+    height: 50px;
+    background: #efefef;
+    z-index: 1000;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border-top: 1px solid #bcbcbc;
+}
+.nav {
+    height: 48px;
+}
+.ful {
+    margin: 0;
+    padding: 0;
+    height: 48px;
+    list-style: none;
+}
+.items {
+    float: left;
+    width: 75px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 60px;
+    text-align: center;
+    color: #666;
+    padding: 4px 0 0 0;
+    opacity: 0.6;
+}
+.items i,.items span {
+    display: block;
+    width: 75px;
+    color: #666;
+}
+.items i {
+    height: 27px;
+    font-size: 27px;;
+}
+.items span {
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #000;
+}
