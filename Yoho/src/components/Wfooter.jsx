@@ -41,4 +41,4 @@ class Wfooter extends React.Component {
   }
 }
 
-export default Wfooter
+export default Wfooter;

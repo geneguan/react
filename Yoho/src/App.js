@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Wheader from "./components/Wheader.jsx";
-// import Whome from "./components/Whome.jsx";
+import Whome from "./pages/Whome/Whome.jsx";
 import Wfooter from "./components/Wfooter.jsx";
 
 class App extends Component {
@@ -8,6 +8,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Wheader />
+                <Whome />
                 <Wfooter />
             </div>
         );

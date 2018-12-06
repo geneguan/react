@@ -1,0 +1,8 @@
+.banner {
+    height: 185px;
+    background: #eee;
+    font-size: 100px;
+}
+.banner img {
+    margin: 0px;
+}
