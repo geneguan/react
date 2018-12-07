@@ -1,23 +1,34 @@
 import React from "react";
 import "./Wfooter.css"
+// import Router from "../router/router.js";
 
 class Wfooter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       imgList: [
-        { name: "首 页", icon: "fa fa-home" },
-        { name: "分 类", icon: "fa fa-th-large" },
-        { name: "逛 ", icon: "fa fa-rocket" },
-        { name: "购物车", icon: "fa fa-shopping-cart" },
-        { name: "我 的", icon: "fa fa-user" }
-      ]
+        { name: "首 页", path: "#/home", icon: "fa fa-home" },
+        { name: "分 类",  path: "#/sort", icon: "fa fa-th-large" },
+        { name: "逛 ",  path: "#/guang", icon: "fa fa-rocket" },
+        { name: "购物车",  path: "#/cart", icon: "fa fa-shopping-cart" },
+        { name: "我 的",  path: "#/my", icon: "fa fa-user" }
+      ],
+      selInit: '#/home',
+      tai: '#/home'
     };
   }
 
-  componentWillReceivePorps() {
-     
+  componentDidMount() {
+      this.setState({
+          tai: this.state.selInit
+      });
   }
+
+    toggle(val) {
+        this.setState({
+            selInit: val
+        });
+    }
 
   render() {
     return (
@@ -26,12 +37,12 @@ class Wfooter extends React.Component {
           <ul className="ful">
             {(() => {
               return this.state.imgList.map((item, index) => {
-                return (
-                  <li key={index} className="items" >
-                    <i className={item.icon} aria-hidden="true" />
-                    <span>{item.name}</span>
-                  </li>
-                );
+                return <a href={item.path} key={index} className={this.state.selInit===item.path ? 'act' : ''} onClick={this.toggle.bind(this,item.path)}>
+                    <li className="items">
+                      <i className={item.icon} aria-hidden="true" />
+                      <span>{item.name}</span>
+                    </li>
+                  </a>;
               });
             })()}
           </ul>

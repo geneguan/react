@@ -1,0 +1,29 @@
+.guang {
+    height: 100px;
+    margin-top: 50px;
+    margin: 51px 0 51px 0;
+}
+.guang .nav {
+    height: 50px;
+    width: 375px;
+    background: #efefef;
+}
+.guang .nav .tabs {
+    list-style: none;
+    height: 50px;
+    color: #666;
+    width: 375px;
+}
+.guang .nav .tabs li {
+    height: 46px;
+    width: 45px;
+    float: left;
+    margin: 0 15px 0 15px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 46px;
+}
+.guang .nav .tabs li.actg {
+    color: #000;
+    border-bottom: 3px solid #f30;
+}

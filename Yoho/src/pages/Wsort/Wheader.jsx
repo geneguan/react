@@ -1,7 +1,7 @@
 import React from "react";
-import Wslider from "./Wslider.jsx";
+import Wslider from "../../components/Wslider.jsx";
 import "./Wheader.css";
-import "../styles/css/font-awesome.css";
+import "../../styles/css/font-awesome.css";
 
 class Wheader extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class Wheader extends React.Component {
         showCon: true,
         shows: 'none',
         num: 1,
-        logoImg: require("../imgs/yohologo01.png") 
+        logoImg: require("../../imgs/yohologo01.png") 
     };
   }
 
@@ -36,12 +36,12 @@ class Wheader extends React.Component {
 //     // console.log(nums);  // 定时切换logo图片
 //     if(nums === 1){
 //         this.setState({ 
-//             logoImg: require("../imgs/yohologo02.png"),
+//             logoImg: require("../../imgs/yohologo02.png"),
 //             num: 2    
 //         });
 //     }else{
 //         this.setState({ 
-//             logoImg: require("../imgs/yohologo01.png"),
+//             logoImg: require("../../imgs/yohologo01.png"),
 //             num: 1    
 //         });
 //     }

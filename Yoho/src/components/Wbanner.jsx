@@ -6,22 +6,7 @@ import "../../node_modules/swiper/dist/css/swiper.min.css";
 class Wbanner extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            imgLists: [
-                {
-                    imageUrl: "https://img11.static.yhbimg.com/yhb-img01/2018/11/21/13/0197b867e9d708c890c98e4c7df23b2163.jpg?imageView2/2/w/640/h/240/q/60"
-                },
-                {
-                    imageUrl: "http://img11.static.yhbimg.com/yhb-img01/2018/11/14/17/0180d69547ef83d1439702adedc92a751f.jpg?imageView2/2/w/640/h/240/q/60"
-                },
-                {
-                    imageUrl: "http://img10.static.yhbimg.com/yhb-img01/2018/11/14/17/01ab5346eb1fd1e93e636ae33831ed9f2c.jpg?imageView2/2/w/640/h/240/q/60"
-                },
-                {
-                    imageUrl: "http://img10.static.yhbimg.com/yhb-img01/2018/11/14/17/01ebae8646366c7a16b780cd63504e4e80.jpg?imageView2/2/w/640/h/240/q/60"
-                }
-            ]
-        };
+        this.state = { imgLists: [{ imageUrl: "https://img10.static.yhbimg.com/yhb-img01/2018/12/04/17/01a7c0e242004bc7bdeed66d96f9036d53.jpg?imageView2/2/w/640/h/240/q/60" }, { imageUrl: "http://img11.static.yhbimg.com/yhb-img01/2018/12/04/17/010b7f6f30482aa47004e17d8138eb9153.jpg?imageView2/2/w/640/h/240/q/60" }, { imageUrl: "http://img10.static.yhbimg.com/yhb-img01/2018/12/04/17/01e068e63d844a852e7952c27379bad84f.jpg?imageView2/2/w/640/h/240/q/60" }, { imageUrl: "http://img10.static.yhbimg.com/yhb-img01/2018/12/04/17/01fd892bc91c7e65a96a7277acb4d8a213.jpg?imageView2/2/w/640/h/240/q/60" }] };
     }
 
     componentDidMount() {
@@ -38,24 +23,26 @@ class Wbanner extends React.Component {
     }
 
     render() {
-        return <div className="banner">
-            <div className="swiper-container">
-                <div className="swiper-wrapper">
-                    {(() => {
-                        return this.state.imgLists.map((item, index) => {
-                            return (
-                                <div className="swiper-slide" key={index}>
-                                    <img className="bannerImg" src={item.imageUrl} alt="" width="375" height="183" />
-                                </div>
-                            );
-                        });
-                    })()}
-                
+        return (
+            <div className="banner">
+                <div className="swiper-container">
+                    <div className="swiper-wrapper">
+                        {(() => {
+                            return this.state.imgLists.map((item, index) => {
+                                return (
+                                    <div className="swiper-slide" key={index}>
+                                        <img className="bannerImg" src={item.imageUrl} alt="" width="375" height="183" />
+                                    </div>
+                                );
+                            });
+                        })()}
+                    
+                    </div>
+                    <div className="swiper-pagination" />
                 </div>
-                <div className="swiper-pagination" />
-                </div>
-            </div>;
-        }
+            </div>
+        );
     }
+}
 
 export default Wbanner;
