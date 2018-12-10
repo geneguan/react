@@ -5,15 +5,34 @@ import "./Whotlist.css";
 class Whotlist extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            datas: []
+        };
     }
-
-    componentDidMount() {}
     
     backTop(item,event) {
         console.log(item)
         window.scrollTo(0,0)
     }
+
+    getData() {
+        React.axios.get('./data/goodslist.json')
+            .then((response) => {
+                // console.log(response);
+                console.log(response.data);
+                this.setState({
+                    datas: response.data
+                })
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+    }
+
+    componentDidMount() {
+        this.getData();
+    }
+    
 
     render() {
         return (
@@ -42,7 +61,7 @@ class Whotlist extends React.Component {
                 </li>
             </ul>
             </div>
-            <div>
+            <div className="imgs">
             <img
                 src="http://img10.static.yhbimg.com/yhb-img01/2017/11/16/14/01f28721040918d34d66531cb1c4b88efe.jpg?imageView2/3/w/640/h/200/q/60"
                 alt=""
@@ -51,7 +70,7 @@ class Whotlist extends React.Component {
             />
             </div>
             <h2>人气单品排行</h2>
-            <div>
+            <div className="imgs">
             <img
                 src="http://img10.static.yhbimg.com/yhb-img01/2017/07/17/15/011dd0506f51b4bc88a527aaccef0795e0.jpg?imageView2/2/w/640/h/200/q/90"
                 alt=""
@@ -62,46 +81,25 @@ class Whotlist extends React.Component {
             <div className="adBox">
             <div className="content">
                 <ul className="ad">
-                <li>
-                    <img
-                    src="http://img10.static.yhbimg.com/yhb-img01/2017/07/17/15/011dd0506f51b4bc88a527aaccef0795e0.jpg?imageView2/2/w/640/h/200/q/90"
-                    alt=""
-                    width="95"
-                    height="170"
-                    />
-                </li>
-                <li>
-                    <img
-                    src="http://img10.static.yhbimg.com/yhb-img01/2017/07/17/15/011dd0506f51b4bc88a527aaccef0795e0.jpg?imageView2/2/w/640/h/200/q/90"
-                    alt=""
-                    width="95"
-                    height="170"
-                    />
-                </li>
-                <li>
-                    <img
-                    src="http://img10.static.yhbimg.com/yhb-img01/2017/07/17/15/011dd0506f51b4bc88a527aaccef0795e0.jpg?imageView2/2/w/640/h/200/q/90"
-                    alt=""
-                    width="95"
-                    height="170"
-                    />
-                </li>
-                <li>
-                    <img
-                    src="http://img10.static.yhbimg.com/yhb-img01/2017/07/17/15/011dd0506f51b4bc88a527aaccef0795e0.jpg?imageView2/2/w/640/h/200/q/90"
-                    alt=""
-                    width="95"
-                    height="170"
-                    />
-                </li>
-                <li>
-                    <img
-                    src="http://img10.static.yhbimg.com/yhb-img01/2017/07/17/15/011dd0506f51b4bc88a527aaccef0795e0.jpg?imageView2/2/w/640/h/200/q/90"
-                    alt=""
-                    width="95"
-                    height="170"
-                    />
-                </li>
+                    {
+                        (() => {
+                            return this.state.datas.map((item, index) => {
+                                return (
+                                    <li key={index}>
+                                        <img
+                                        src={item.image_url}
+                                        alt={item.title}
+                                        width="93"
+                                        height="125"
+                                        />
+                                        <p>{item.RMB_price}</p>
+                                    </li>
+                                );
+                            })
+                        })()
+                    }
+                    
+
                 </ul>
             </div>
             </div>

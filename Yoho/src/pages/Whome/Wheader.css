@@ -1,39 +1,38 @@
-.header{
-        height: 50px;
-        background: #7ad9f9;
-        z-index: 1000;
-        position: fixed;
-        left: 0px;
-        right: 0px;
-        top: 0px;
-        left: 0px;
-        border-bottom: 1px solid #00CCFF;
+.homeHeader {
+    height: 50px;
+    background: #7ad9f9;
+    z-index: 1000;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    border-bottom: 1px solid #00CCFF;
 }
-.menu, .logo, .search {
+.homeHeader .menu, .homeHeader .search {
     width: 60px;
     height: 50px;
 }
-.menu .fa, .search .fa {
+.homeHeader .menu .fa, .homeHeader .search .fa {
     display: block;
     font-size: 20px;
     text-align: center;
     line-height: 50px;
     color: #fff; 
 }
-.menu {
+.homeHeader .menu {
     float: left;
 }
-.logo {
+.homeHeader .logo {
     float: left;
-    margin: 0 0 0 60px;
+    margin: 0 auto;
 }
-.search {
+.homeHeader .search {
     float: right;
 }
-img {
+.homeHeader img {
     margin: 6px 0 0 0;
 }
-.mask {
+.homeHeader .mask {
     top: 0;
     bottom: 0;
     left: 0;

@@ -1,24 +1,24 @@
-.footer{
+.footer {
     display: block;
     height: 50px;
     background: #efefef;
-    z-index: 1000;
+    z-index: 10;
     position: fixed;
     bottom: 0px;
     left: 0px;
     right: 0px;
     border-top: 1px solid #bcbcbc;
 }
-.nav {
+.footer .nav {
     height: 48px;
 }
-.ful {
+.footer .ful {
     margin: 0;
     padding: 0;
     height: 48px;
     list-style: none;
 }
-.items {
+.footer .items {
     float: left;
     width: 75px;
     height: 46px;
@@ -29,27 +29,27 @@
     padding: 4px 0 0 0;
     opacity: 0.6;
 }
-.items i,.items span {
+.footer .items i,.footer .items span {
     display: block;
     width: 75px;
     color: #666;
 }
-.items i {
+.footer .items i {
     height: 27px;
-    font-size: 27px;;
+    font-size: 27px;
 }
-.items span {
+.footer .items span {
     height: 18px;
     font-size: 12px;
     line-height: 18px;
     color: #000;
 }
-a {
+.footer a {
     float: left;
     display: block;
     width: 75px;
     height: 50px;
 }
-.act {
+.footer .act {
     background: #bcbcbc;
 }

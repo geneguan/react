@@ -1,6 +1,6 @@
-.header{
+.myHeader {
         height: 50px;
-        background: #7ad9f9;
+        background: #333;
         z-index: 1000;
         position: fixed;
         left: 0px;
@@ -9,35 +9,27 @@
         left: 0px;
         border-bottom: 1px solid #00CCFF;
 }
-.menu, .logo, .search {
+.myHeader .back, .bars {
     width: 60px;
     height: 50px;
 }
-.menu .fa, .search .fa {
+.myHeader .back .fa, .bars .fa {
     display: block;
     font-size: 20px;
     text-align: center;
     line-height: 50px;
     color: #fff; 
 }
-.menu {
+.myHeader .back {
     float: left;
 }
-.logo {
+.myHeader .logo {
     float: left;
-    margin: 0 0 0 60px;
+    margin: 0 auto;
 }
-.search {
+.myHeader .bars {
     float: right;
 }
-img {
+.myHeader img {
     margin: 6px 0 0 0;
-}
-.mask {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0,.3);
-    position: fixed;
 }

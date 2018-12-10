@@ -1,5 +1,6 @@
 ul {
     list-style: none;
+    margin: 0;
     padding: 0;
 }
 .toTop {
@@ -19,24 +20,23 @@ ul {
     text-align: center;
     line-height: 50px;
     color: #666;
-    background: #dedede;
+    /* background: #dedede; */
 }
 h2 {
-        width: 373;
-        height: 44px;
-        font-size: 16px;
-        color: #666;
-        line-height: 44px;
-        text-align: center;
-        border: 1px solid #ddd;
-        background: #eee;
+    height: 44px;
+    font-size: 16px;
+    color: #666;
+    line-height: 44px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background: #eee;
 }
 .adBox {
     margin: 0 0 10px 0;
-    width: 375px;
-    height: 190px;
+    height: 161px;
     background: #eee;
     overflow: hidden;
+    padding-top: 5px;
 }
 .adBox .content {
     width: 100%;
@@ -50,8 +50,41 @@ h2 {
     min-width: 100%;
 }
 .adBox .ad li {
-    display: flex;
-    align-items: center;
-    background: #ccc;
+    width: 93px;
+    height: 160px;
+    /* background: #ccc; */
     margin: 0 5px 0 0;
+}
+
+.adBox .ad li img {
+    display: block;
+    margin: 0;
+}
+.adBox .ad li p {
+    height: 30px;
+    margin: 0px;
+    background: #fff;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    border-top: 1px solid #efefef;
+    color: #f30;
+    font-weight: 900;
+}
+.backtop {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    background: #999;
+    position: absolute;
+}
+.imgs {
+    background: #efefef;
+    padding: 5px 0;
+    margin-bottom: 5px;
+}
+.imgs img {
+    margin: 0 auto;
+    display: block;
 }

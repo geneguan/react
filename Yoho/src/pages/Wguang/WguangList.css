@@ -1,0 +1,51 @@
+.guangList {
+    width: 100%;
+}
+
+.guangList .showBox {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.showBox li {
+    float: left;
+    width: 154px;
+    height: 279px;
+    margin: 20px 13px;
+    background: #eee;
+    padding: 3px;
+}
+.showBox li .img {
+    margin: 0;
+    height: 199px;
+}
+.showBox li .img img {
+    margin: 0;
+}
+.showBox li .title {
+    width: 144px;
+    margin: 0;
+    height: 50px;
+    padding: 0 5px;
+    font-size: 14px;
+    line-height: 25px;
+    background: #fff;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.showBox li .price {
+    margin: 0;
+    height: 30px;
+    padding: 0 8px;
+    font-size: 12px;
+    line-height: 30px;
+    color: #f30;
+    font-weight: 900;
+    background: #fff;
+}

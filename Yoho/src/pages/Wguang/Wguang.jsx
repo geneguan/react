@@ -1,4 +1,5 @@
 import React from "react";
+import Wheader from "./Wheader.jsx";
 import "./Wguang.css";
 import WguangList from "./WguangList.jsx";
 
@@ -27,6 +28,7 @@ class Wguang extends React.Component {
   render() {
     return (
       <div className="guang">
+        <Wheader />
         <div className="nav">
           <ul className = "tabs">
             {(() => {

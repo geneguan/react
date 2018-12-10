@@ -31,7 +31,7 @@ class Wbanner extends React.Component {
                             return this.state.imgLists.map((item, index) => {
                                 return (
                                     <div className="swiper-slide" key={index}>
-                                        <img className="bannerImg" src={item.imageUrl} alt="" width="375" height="183" />
+                                        <img className="bannerImg" src={item.imageUrl} alt=""/>
                                     </div>
                                 );
                             });

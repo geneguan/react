@@ -1,43 +1,35 @@
-.header{
-        height: 50px;
-        background: #7ad9f9;
-        z-index: 1000;
-        position: fixed;
-        left: 0px;
-        right: 0px;
-        top: 0px;
-        left: 0px;
-        border-bottom: 1px solid #00CCFF;
+.cartHeader{
+    height: 50px;
+    background: #949449;
+    z-index: 1000;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    left: 0px;
+    border-bottom: 1px solid #00CCFF;
 }
-.menu, .logo, .search {
+.cartHeader .back, .cartHeader .bars {
     width: 60px;
     height: 50px;
 }
-.menu .fa, .search .fa {
+.cartHeader .back .fa, .cartHeader .bars .fa {
     display: block;
     font-size: 20px;
     text-align: center;
     line-height: 50px;
     color: #fff; 
 }
-.menu {
+.cartHeader .back {
     float: left;
 }
-.logo {
+.cartHeader .logo {
     float: left;
-    margin: 0 0 0 60px;
+    margin: 0 auto;
 }
-.search {
+.cartHeader .bars {
     float: right;
 }
-img {
+.cartHeader img {
     margin: 6px 0 0 0;
-}
-.mask {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0,.3);
-    position: fixed;
 }

@@ -1,8 +1,9 @@
 .banner {
-    height: 185px;
     background: #eee;
     font-size: 100px;
 }
 .banner img {
-    margin: 0px;
+    display: block;
+    height: 183px;
+    margin: 0px auto;
 }

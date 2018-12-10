@@ -57,6 +57,7 @@ class Wheader extends React.Component {
   }
 
   hideSlider(e) {
+      console.log(666)
       this.setState({
           showCon: !this.state.showCon,
           shows: 'none'
@@ -65,7 +66,7 @@ class Wheader extends React.Component {
 
   render() {
     return (
-      <div className="header">
+      <div className="homeHeader">
         <div className="menu" onClick={this.showSlider.bind(this)}>
           <i className="fa fa-list" aria-hidden="true" />
         </div>
